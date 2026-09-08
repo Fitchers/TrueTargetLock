@@ -1,5 +1,7 @@
 # True Target Lock for The Blood of Dawnwalker
 
+![True Target Lock cover](images/cover.png)
+
 A small UE4SS Lua mod that stops ordinary mouse movement from changing the
 selected enemy while hard lock is active.
 
@@ -39,3 +41,11 @@ Remove `TrueTargetLock : 1` from `ue4ss/Mods/mods.txt`, then delete the
 
 Initial proof-of-concept. Confirmed in combat with multiple enemies on the GOG
 Patch 2 build: mouse movement no longer changes a hard-locked target.
+
+## Community
+
+Join the community on [Discord](https://discord.gg/7S7CfzbXkh).
+
+## Support
+
+If you want to support future work, visit [Second Player on Patreon](https://www.patreon.com/cw/Second_Player).
