@@ -1,0 +1,14 @@
+# UE4SS runtime output and generated dumps
+UE4SS.log
+UE4SS_ObjectDump.txt
+
+# Packaged releases
+*.zip
+*.7z
+
+# Editor and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
