@@ -1,23 +1,29 @@
 # True Target Lock for The Blood of Dawnwalker
 
-![True Target Lock cover](images/cover.png)
+![True Target Lock cover](cover.png)
 
-A small UE4SS Lua mod that stops ordinary mouse movement from changing the
-selected enemy while hard lock is active.
+A UE4SS Lua mod that keeps the enemy you hard-lock selected, regardless of
+whether you play with a mouse, keyboard, or controller.
 
 ## What it changes
 
-The game routes mouse movement through `SwitchLockTarget` and marks it as an
-allowed hard-lock switch. This mod changes only that dedicated call parameter.
+The game handles input-device target changes through `SwitchLockTarget`. This
+mod prevents user-requested target switching only while hard lock is already
+active:
 
-It does not modify attacks, blocks, initial target selection, non-mouse target
-controls, combat exit, or target-death handling.
+- Mouse: prevents ordinary mouse movement from moving the hard lock.
+- Keyboard and controller: prevents target cycling while the hard lock is on.
+
+To select another enemy, release hard lock, select the enemy, then hard-lock
+again. Initial target selection, attacks, blocking, combat exit, and automatic
+retargeting when a target dies are unchanged.
 
 ## Tested build
 
-- Store: GOG
+- Tested store: GOG
 - Game build: `dw1-pc-gog-257186-shipping-patch2-all-CL-257186`
 - UE4SS: `v3.0.1-1111-g97b7e501`
+- Community report: works on Steam.
 
 ## Installation
 
@@ -37,10 +43,11 @@ without restarting.
 Remove `TrueTargetLock : 1` from `ue4ss/Mods/mods.txt`, then delete the
 `ue4ss/Mods/TrueTargetLock` folder.
 
-## Status
+## Version 1.0.0
 
-Initial proof-of-concept. Confirmed in combat with multiple enemies on the GOG
-Patch 2 build: mouse movement no longer changes a hard-locked target.
+- Added controller and keyboard support.
+- Confirmed in combat with multiple enemies on the GOG Patch 2 build.
+- Steam compatibility is community-confirmed.
 
 ## Community
 
